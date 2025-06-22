@@ -1,0 +1,155 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 80px 20px 40px; /* extra top padding for fixed nav */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+  width: 100%;
+  background-color: #2a7ae2;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  background-color: #1b5dbf;
+  color: #e0e0e0;
+}
+
+/* Sections styling */
+section {
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/* Image gallery */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.image-gallery img {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Button styling */
+button {
+  background-color: #2a7ae2;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1b5dbf;
+}
+
+/* Footer styling */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  width: 100%;
+  background-color: #2a7ae2;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .image-gallery {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+/* Accessibility improvements */
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fadeInUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s; /* Will be set via JS */
+}
+/* Focus styles for accessibility */
