@@ -1,45 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <title>Eat Nearby Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eat Nearby</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <nav>
-    <ul class="nav-menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">EatNearby</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="nav-menu" id="sideNav">
+      <span class="close" id="closeNav">&times;</span>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#places">Places</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <section id="home">
-    <h1>Welcome to our Eatery</h1>
-    <p>MASANA BILANKULU</p>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <h1>Find Places to Eat Near You</h1>
+      <p>Discover the best spots — beautifully curated.</p>
+      <a href="#places" class="cta-btn">Explore Now</a>
+    </div>
   </section>
 
-  <section id="gallery" class="image-gallery">
-    <img src="Bars logo.jpeg" alt="Bar logo" width="200" />
-    <img src="Beauty Salons Logo.jpeg" alt="Hair and Beauty" width="200" />
-    <img src="Dentists.jpeg" alt="Health" width="200" />
-    <img src="Eating Logo.png" alt="Food" width="200" />
+  <!-- Features Section -->
+  <section id="features" class="section fade-in">
+    <h2>Why Choose Us</h2>
+    <div class="features-grid">
+      <div class="card">🍽 Curated Menus</div>
+      <div class="card">📍 Location-Aware</div>
+      <div class="card">💬 Real Reviews</div>
+      <div class="card">📱 Mobile Friendly</div>
+    </div>
   </section>
 
-  <section id="navigation">
-    <p>Click the button below to navigate to the next page.</p>
-    <button id="navigateBtn">Click Here for Navigation</button>
+  <!-- Places Section -->
+  <section id="places" class="section fade-in">
+    <h2>Popular Nearby</h2>
+    <div class="grid">
+      <div class="place-card">Truth Coffee</div>
+      <div class="place-card">The House of Machines</div>
+      <div class="place-card">Orphanage Bar</div>
+      <div class="place-card">Shakers Durban</div>
+    </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2023 Eat Nearby. All rights reserved.</p>
+    <p>&copy; 2025 Eat Nearby. Built with care in South Africa.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>

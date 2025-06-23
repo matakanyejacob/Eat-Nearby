@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Top South African Bars</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Fullscreen flag overlay */
+    #flagOverlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #flagOverlay img {
+      max-width: 80vw;
+      max-height: 80vh;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    /* Hide bar content initially */
+    #barContent {
+      display: none;
+      padding: 20px;
+      max-width: 900px;
+      margin: 80px auto 40px;
+      text-align: center;
+    }
+
+    #barList {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    #barList li {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    #barList li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    #barList img {
+      width: 140px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      object-fit: cover;
+    }
+
+    #barList span {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div id="flagOverlay">
+  <img src="images/sa-flag.png" alt="South African Flag" />
+</div>
+
+<div id="barContent">
+  <h1>Top 10 South African Bars</h1>
+  <ul id="barList">
+    <li>
+      <img src="images/bars photos/Orphanage Cocktail Emporium.jpeg" alt="Orphanage Cocktail Emporium" />
+      <span>Orphanage Cocktail Emporium – Cape Town</span>
+    </li>
+    <li>
+      <img src="images/bars photos/Saint Champagne Bar & Lounge.png" alt="Saint Champagne Bar & Lounge" />
+      <span>Saint Champagne Bar & Lounge – Sandton</span>
+    </li>
+    <li>
+      <img src="images/bars photos/Shakers bar.jpeg" alt="Shakers Bar" />
+      <span>Shakers Bar – Durban</span>
+    </li>
+    <li>
+      <img src="images/bars photos/Smoking kills.jpeg" alt="Smoking Kills" />
+      <span>Smoking Kills – Melville</span>
+    </li>
+    <li>
+      <img src="images/bars photos/The Green Man.jpeg" alt="The Green Man" />
+      <span>The Green Man – Johannesburg</span>
+    </li>
+    <li>
+      <img src="images/bars photos/The House of Machines.jpeg" alt="The House of Machines" />
+      <span>The House of Machines – Cape Town</span>
+    </li>
+    <li>
+      <img src="images/bars photos/The Landmark Cocktail Bar.jpeg" alt="The Landmark Cocktail Bar" />
+      <span>The Landmark Cocktail Bar – Johannesburg</span>
+    </li>
+    <li>
+      <img src="images/bars photos/Truth Bar.jpeg" alt="Truth Bar" />
+      <span>Truth Bar – Cape Town</span>
+    </li>
+    <li>
+      <img src="images/bars photos/Bar Nine.jpeg" alt="Bar Nine" />
+      <span>Bar Nine – Pretoria</span>
+    </li>
+    <li>
+      <img src="images/bars photos/Bar Ten.jpeg" alt="Bar Ten" />
+      <span>Bar Ten – Johannesburg</span>
+    </li>
+  </ul>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const flagOverlay = document.getElementById('flagOverlay');
+    const barContent = document.getElementById('barContent');
+
+    // Show flag overlay for 3 seconds, then hide and show bars
+    setTimeout(() => {
+      flagOverlay.style.display = 'none';
+      barContent.style.display = 'block';
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>
+<!-- This code creates a simple webpage that displays a list of top bars in South Africa.
+It includes a fullscreen overlay with the South African flag that disappears after 3 seconds, revealing the bar content. Each bar is represented with an image and name, styled for a clean and modern look. The layout is responsive, adapting to different screen sizes using CSS grid. -->

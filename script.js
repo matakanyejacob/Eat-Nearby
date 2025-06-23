@@ -1,31 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('navigateBtn');
-  btn.addEventListener('click', () => {
-    // Example: navigate to Gallery section
-    location.hash = '#gallery';
-  });
-});
-document.addEventListener('DOMContentLoaded', () => {
-  // Existing button click code
-  const btn = document.getElementById('navigateBtn');
-  btn.addEventListener('click', () => {
-    location.hash = '#gallery';
-  });
+  const sideNav = document.getElementById("sideNav");
+  const hamburger = document.getElementById("hamburger");
+  const closeNav = document.getElementById("closeNav");
 
-  // Fade-in on scroll
-  const fadeElements = document.querySelectorAll('section');
+  // Open/Close side nav
+  hamburger.onclick = () => sideNav.classList.add("open");
+  closeNav.onclick = () => sideNav.classList.remove("open");
 
-  const fadeInOnScroll = () => {
-    fadeElements.forEach((el, index) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        el.style.animationDelay = `${index * 0.3}s`;
-        el.classList.add('fade-in');
-      }
-    });
+  // Scroll reveal
+  const faders = document.querySelectorAll('.fade-in');
+  const options = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -100px 0px"
   };
 
-  // Run once and on scroll
-  fadeInOnScroll();
-  window.addEventListener('scroll', fadeInOnScroll);
+  const revealOnScroll = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  faders.forEach(fader => revealOnScroll.observe(fader));
 });
