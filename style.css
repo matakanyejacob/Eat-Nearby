@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f0f8ff; /* Soft blue background */
-  color: #333;
+  background-color: #f5f0e6; /* Warm beige background */
+  color: #4a403a; /* Dark taupe text */
   line-height: 1.6;
 }
 
@@ -15,46 +15,51 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: skyblue;
+  background-color: #b39c82; /* Taupe navigation */
   padding: 1rem 1.5rem;
   position: fixed;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #f5f0e6; /* Light text on taupe */
 }
 
 .hamburger {
   font-size: 24px;
   cursor: pointer;
   display: block;
+  color: #f5f0e6;
 }
 
 .nav-menu {
   position: fixed;
   top: 0;
   left: -250px;
-  background-color: skyblue;
+  background-color: #b39c82; /* Taupe sidebar */
   height: 100%;
   width: 250px;
   padding-top: 60px;
   display: flex;
   flex-direction: column;
   transition: 0.3s;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
 }
 
 .nav-menu a {
   padding: 15px 25px;
   text-decoration: none;
-  color: white;
+  color: #f5f0e6;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .nav-menu a:hover {
-  background-color: #1e90ff;
+  background-color: #9c8a6a; /* Slightly darker taupe on hover */
 }
 
 .close {
@@ -62,7 +67,7 @@ body {
   top: 10px;
   right: 20px;
   font-size: 28px;
-  color: white;
+  color: #f5f0e6;
   cursor: pointer;
 }
 
@@ -72,10 +77,19 @@ body {
   right: 20px;
   text-decoration: none;
   font-weight: bold;
-  color: #333;
+  color: #4a403a;
   display: flex;
   align-items: center;
   gap: 8px;
+  background-color: #d9cbb0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #c5b495;
 }
 
 .icon {
@@ -101,18 +115,19 @@ body {
 .category-card,
 .place-card,
 .card {
-  background-color: #ffffff;
+  background-color: #fff8f0; /* Soft warm card bg */
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(75, 65, 58, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .category-card:hover,
 .place-card:hover,
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(75, 65, 58, 0.25);
 }
 
 .category-card img,
@@ -133,14 +148,21 @@ body {
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #bfb6a8;
   border-radius: 8px;
   font-size: 16px;
+  background-color: #fff8f0;
+  color: #4a403a;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9c8a6a;
 }
 
 .contact-form button {
-  background-color: #1e90ff;
-  color: white;
+  background-color: #b39c82;
+  color: #f5f0e6;
   border: none;
   padding: 14px;
   border-radius: 8px;
@@ -150,16 +172,17 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #0f6cbf;
+  background-color: #9c8a6a;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color: skyblue;
-  color: white;
+  background-color: #b39c82;
+  color: #f5f0e6;
   font-size: 14px;
   margin-top: 60px;
+  box-shadow: inset 0 1px 0 #c5b495;
 }
 
 /* Fade in animation */
@@ -173,3 +196,30 @@ footer {
     opacity: 1;
   }
 }
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    width: 200px;
+  }
+
+  .nav-menu a {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .login-btn {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+} 
