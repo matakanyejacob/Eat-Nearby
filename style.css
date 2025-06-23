@@ -161,3 +161,45 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* ...existing styles above... */
+
+/* Grid container for places */
+#places .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual place cards */
+.place-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.place-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.place-card span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #222;
+  display: block;
+}
+
+/* ...any styles below... */
