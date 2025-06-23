@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Near Me</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -17,7 +15,7 @@
     <div class="hamburger" id="hamburger">&#9776;</div>
     <nav class="nav-menu" id="sideNav">
       <span class="close" id="closeNav">&times;</span>
-      <a href="#login" class="login-nav">Login</a>
+      <a href="login.html">Login</a>
       <a href="#home">Home</a>
       <a href="#features">Features</a>
       <a href="#places">Places</a>
@@ -26,48 +24,97 @@
     </nav>
   </header>
 
-  <!-- Login Button -->
- <a href="#login" class="login-btn">
-  <img src="images/user-icon.png" alt="Login Icon" class="icon" />
-  Login
-</a>
+  <!-- Slideshow Section -->
+<section id="slideshow" class="section fade-in">
+  <h2>Featured Attractions</h2>
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/logos/slideshow/table mountain.jpeg" alt="Attraction 1" />
+    </div>
+    <div class="slide fade">
+      <img src="images/logos/slideshow/attractions 2.jpeg" alt="Attraction 2" />
+    </div>
+    <div class="slide fade">
+      <img src="images/logos/slideshow/attractions 3.jpeg" alt="Attraction 3" />
+    </div>
+    <!-- Add more slides as needed -->
+    
+    <!-- Next/Prev arrows -->
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+
+  <!-- Dots / indicators -->
+  <div class="dots-container" style="text-align:center; margin-top:10px;">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+</section>
 
   <!-- Home Section -->
-  <section id="home" class="section fade-in">
-    <h1>Welcome to Near Me</h1>
-    <p>Explore the best South African places near you.</p>
-  </section>
-
-  <!-- Categories Section -->
-  <section id="categories" class="section fade-in">
-    <h2>Explore Categories</h2>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="section fade-in">
-    <h2>Why Choose Us</h2>
-    <div class="features-grid">
-      <div class="card">🍽 Curated Menus</div>
-      <div class="card">📍 Location-Aware</div>
-      <div class="card">💬 Real Reviews</div>
-      <div class="card">📱 Mobile Friendly</div>
+  <section id="tourist-categories" class="section fade-in">
+  <h2>Explore as a Tourist</h2>
+  <div class="categories-grid">
+    <div class="category-card">
+      <img src="images/logos/landmarks.jpeg" alt="Landmarks" />
+      <span class="category-name">Landmarks</span>
     </div>
-  </section>
+    <div class="category-card">
+      <img src="images/logos/museums.jpeg" alt="Museums" />
+      <span class="category-name">Museums</span>
+    </div>
+    <div class="category-card">
+      <img src="images/logos/beaches.jpeg" alt="Beaches" />
+      <span class="category-name">Beaches</span>
+    </div>
+    <div class="category-card">
+      <img src="images/logos/parks.png" alt="Parks" />
+      <span class="category-name">Parks</span>
+    </div>
+    <div class="category-card">
+      <img src="images/logos/food.jpeg" alt="Food" />
+      <span class="category-name">Food</span>
+    </div>
+    <div class="category-card">
+      <img src="images/logos/cars.jpeg" alt="Cars" />
+      <span class="category-name">Cars</span>
+    </div>
+    <div class="category-card">
+      <img src="images/logos/football.jpeg" alt="Football" />
+      <span class="category-name">Football</span>
+    </div>
+    <div class="category-card">
+      <img src="images/logos/school.jpeg" alt="Schools" />
+      <span class="category-name">Schools</span>
+    </div>
+    <!-- New categories below -->
+    <div class="category-card">
+      <img src="images/logos/shopping.jpeg" alt="Shopping" />
+      <span class="category-name">Shopping</span>
+    </div>
+    <div class="category-card">
+      <img src="images/logos/theaters.jpeg" alt="Theaters" />
+      <span class="category-name">Theaters</span>
+    </div>
+    <div class="category-card">
+      <img src="images/logos/hiking.jpeg" alt="Hiking" />
+      <span class="category-name">Hiking</span>
+    </div>
+    <div class="category-card">
+      <img src="images/logos/wineries.jpeg" alt="Wineries" />
+      <span class="category-name">Wineries</span>
+    </div>
+  </div>
+</section>
+    <!-- Features Section -->
 
-  <!-- Places Section -->
-  <section id="places" class="section fade-in">
-    <h2>Popular Places</h2>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message" rows="4" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <!-- Get Started Section -->
+  <section class="section fade-in get-started">
+    <h2>Get Started</h2>
+    <p>Join us to explore the best places around you.</p>
+    <a href="login.html" class="btn">Login</a>
   </section>
 
   <!-- Footer -->
