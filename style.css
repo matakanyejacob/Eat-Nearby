@@ -16,22 +16,21 @@ body {
   text-align: center;
 }
 
-/* Navbar */
-.navbar {
+.nav-menu {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: saturate(180%) blur(10px);
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: skyblue; /* ✅ Sky blue */
+  padding-top: 60px;
+  transition: left 0.3s ease;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  height: 60px;
-  z-index: 10000;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 11000;
 }
+
 
 .logo {
   font-weight: 700;
